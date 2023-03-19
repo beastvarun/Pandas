@@ -90,37 +90,26 @@ print(var)
 
 #Delete and Insert Data in Pandas
 	Insert
+
 #CODE11
+
 var=pd.DataFrame({"A":[1,2,3,4],"B":[1,2,3,4]})
 print(var)
 print()
 var.insert(1,"new",var["A"])
 print(var)
-output:
-   A  B
-0  1  1
-1  2  2
-2  3  3
-3  4  4
 
-   A  new  B
-0  1    1  1
-1  2    2  2
-2  3    3  3
-3  4    4  4
+
+
 #CODE12
 var=pd.DataFrame({"A":[1,2,3,4,5],"B":[1,2,3,4,5]})
 var["pyhton"]=var["A"][:3]
 print(var)
-output:
-   A  B  pyhton
-0  1  1     1.0
-1  2  2     2.0
-2  3  3     3.0
-3  4  4     NaN
-4  5  5     NaN
+
+
 	DELETE
 Pop function
+
 	#CODE13
 	var=pd.DataFrame({"A":[111,2,113,114,115],"B":[11,21,31,41,51],"C":[13,14,1,5,16]})
 	
@@ -128,21 +117,10 @@ Pop function
 	print()
 	var=var.pop("B")
 	print(var)
-output:
-     A   B   C
-0  111  11  13
-1    2  21  14
-2  113  31   1
-3  114  41   5
-4  115  51  16
 
-0    11
-1    21
-2    31
-3    41
-4    51
-Name: B, dtype: int64
+
 	DELETE FUNCTION
+
 #CODE14
 var=pd.DataFrame({"A":[111,2,113,114,115],"B":[11,21,31,41,51],"C":[13,14,1,5,16]})
 
@@ -151,20 +129,7 @@ print()
 del var["B"]
 print(var)
 
-output:
-     A   B   C
-0  111  11  13
-1    2  21  14
-2  113  31   1
-3  114  41   5
-4  115  51  16
 
-     A   C
-0  111  13
-1    2  14
-2  113   1
-3  114   5
-4  115  16
 
 Python Pandas CSV Files
   Difference between CSV and XLS (excel) file formats:
@@ -175,19 +140,17 @@ Syntax to create a csv file:
 var.to_csv(“file_name”)
 to remove indexing and header
 var.to_csv(“file_name”,index=False,header=[1,2,3])
+
 #CODE15
+
 dis={"A":[11,22,33,44,55],"B":[66,77,88,99,98],"C":[14,15,16,17,18]}
 d=pd.DataFrame(dis)
 print(d)
 print()
 d.to_csv("test_new1.csv",index=False,header=[1,2,3])
-output:
-       1    2    3
-0  11  66  14
-1  22  77  15
-2  33  88  16
-3  44  99  17
-4  55  98  18
+
+
+
 
 
 
