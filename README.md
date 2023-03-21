@@ -151,6 +151,11 @@ d.to_csv("test_new1.csv",index=False,header=[1,2,3])
 
 
 
+READ CSV FILES:
+	A simple way to store big data sets is to use CSV files (comma separated files)
+	CSV files contains plain text and is a well known format that can be read by everyone including Pandas
+
+
 
 
 
